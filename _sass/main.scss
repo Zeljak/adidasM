@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+@import "./variables";
+
+@import "../node_modules/bulma/bulma";
+
+@import "../node_modules/swiper/swiper-bundle";
+
+//GENERAL
+.body {
+	background-color: $white;
+	max-width: 100vw;
+	margin: 0;
+	font-family: $family-primary;
+}
+
+section {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+section.full {
+	max-width: 100vw;
+}
+
+//FIRST VIDEO BLOCK
+.firstVideo {
+	padding-top: 0;
+}
+.videoBlock1,
+.videoBlock2 {
+	max-width: auto;
+	align-self: center;
+}
+.videoWrapper {
+	padding-top: 0;
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.videoWrapper video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	}
+
+//BLOCK WITH MAIN TITLE
+.main-title {
+	padding-top: 100px;
+
+	@media (min-width: 768px) {
+		padding-top: 10px;
+		padding-left: 15px;
+	}
+}
+
+//BLOCK WITH PINK TEXT
+.container-pink {
+	padding-left: 0;
+	padding-right: 0;
+
+	@media (max-width: 768px) {
+		padding-top: 50px;
+	}
+}
+.pink-text {
+	padding-top: 100px;
+
+	@media (max-width: 768px) {
+		padding-top: 0;
+	}
+}
+
+//FIRST BLOCK WITH TEXT
+.section-blue {
+	background-color: $turquoise-blue;
+	color: $white;
+	font-size: $is-size-1;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-bottom: 40px;
+	margin-top: 60px;
+
+	@media (max-width: 768px) {
+		font-size: 14px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+}
+
+//SECOND BLOCK WITH TEXT
+.second-block__text,
+.forth-block__text {
+	font-size: $is-size-3;
+	color: black;
+
+	@media (max-width: 768px) {
+		font-size: 12px;
+		padding-top: 0;
+	}
+}
+
+.swiperUni {
+	overflow: hidden;
+	position: relative;
+
+	@media (min-width: 1024px) {
+		display: none;
+	}
+
+	.swiper-slide {
+		text-align: center;
+
+		img {
+			width: 80%;
+		}
+	}
+
+	.swiperUni-next::after {
+		right: 0px;
+		top: 50%;
+		border: solid transparent;
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(228, 12, 0, 0);
+		border-left-color: #e40c00;
+		border-width: 22px;
+		margin-top: -22px;
+	}
+
+	.swiperUni-prev::after {
+		left: 0px;
+		top: 50%;
+		border: solid transparent;
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(228, 12, 0, 0);
+		border-right-color: #e40c00;
+		border-width: 22px;
+		margin-top: -22px;
+	}
+}
+
+//BLOCK WITH TWO ROWS OF PHOTOS
+.container-photos {
+	// display: flex;
+	// justify-content: space-evenly;
+
+	.photos {
+		display: flex;
+		justify-content: center;
+
+
+		div {
+			padding: 0 5px;
+		}
+
+		.x3 {
+			width: 33.3333%;
+		}
+		.x4 {
+			width: 25%;
+		}
+		.x5 {
+			width: 20%;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+//BLOCK WITH #adidasOriginalsForum
+.container-hash,
+.container-hash2 {
+	padding-top: 50px;
+	padding-bottom: 80px;
+	padding-left: 70px;
+
+	@media (max-width: 768px) {
+		padding-right: 80px;
+	}
+}
+
+.caption {
+	font-size: $is-size-6;
+	line-height: 1.42;
+	font-weight: 100;
+	padding-top: 20px;
+	padding-right: 50px;
+
+	@media (max-width: 768px) {
+		font-size: 12px;
+		padding-right: 50px;
+	}
+}
+
+.forth-block__text {
+	padding-bottom: 20px;
+}
+
+.hash-text {
+	font-family: $family-secondary;
+	font-size: 67px;
+	color: black;
+
+	@media (max-width: 768px) {
+		font-size: 30px;
+	}
+	}
+
+	a {
+		color: black;
+		
+	  }
+	
+	  a:hover {
+		color: red;
+	  }
+
+	  .hash-text2 {
+		font-family: $family-secondary;
+		font-size: 40px;
+		color: black;
+		font-weight: 300;
+
+		@media (max-width: 768px) {
+			font-size: 20px;
+		}
+		}
+	
+		a {
+			color: black;
+			
+		  }
+		
+		  a:hover {
+			color: red;
+		  }
+
+//FOOTER
+.footer {
+	background-color: $white;
+}
+
+h4 {
+	@media (max-width: 1024px) {
+		font-size: 20px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 12px;
+	}
+}
+
+.container-footer {
+	h4, a {
+		padding: 20px;
+	}
+
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 12px;
+	}
+}
