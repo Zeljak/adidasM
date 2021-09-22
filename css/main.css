@@ -12397,6 +12397,21 @@ section.full {
   }
 }
 
+.kosarka {
+  font-size: 20px;
+  color: black;
+}
+@media (max-width: 1024px) {
+  .kosarka {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .kosarka {
+    font-size: 14px;
+  }
+}
+
 .swiperUni {
   overflow: hidden;
   position: relative;
@@ -12509,11 +12524,11 @@ section.full {
 }
 
 a {
-  color: black;
+  color: #1968E5;
 }
 
 a:hover {
-  color: red;
+  color: #1968E5;
 }
 
 .hash-text2 {
@@ -12529,11 +12544,15 @@ a:hover {
 }
 
 a {
-  color: black;
+  color: #1968E5;
 }
 
 a:hover {
-  color: red;
+  color: #1968E5;
+}
+
+span {
+  font-weight: bold;
 }
 
 .footer {
@@ -12567,4 +12586,8 @@ a:hover {
             align-items: center;
     font-size: 12px;
   }
+}
+
+.red {
+  color: red;
 }

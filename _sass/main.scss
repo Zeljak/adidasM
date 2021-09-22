@@ -132,6 +132,19 @@ section.full {
 	}
 }
 
+.kosarka {
+	font-size: 20px;
+	color: black;
+
+	@media (max-width: 1024px) {
+		font-size: 16px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+}
+
 .swiperUni {
 	overflow: hidden;
 	position: relative;
@@ -250,12 +263,12 @@ section.full {
 	}
 
 	a {
-		color: black;
+		color: $adidasblue;
 		
 	  }
 	
 	  a:hover {
-		color: red;
+		color: $adidasblue;
 	  }
 
 	  .hash-text2 {
@@ -270,14 +283,17 @@ section.full {
 		}
 	
 		a {
-			color: black;
+			color: $adidasblue;
 			
 		  }
 		
 		  a:hover {
-			color: red;
+			color: $adidasblue;
 		  }
 
+		  span {
+			  font-weight: bold;
+		  }
 //FOOTER
 .footer {
 	background-color: $white;
@@ -304,4 +320,8 @@ h4 {
 		align-items: center;
 		font-size: 12px;
 	}
+}
+
+.red {
+	color: red;
 }
